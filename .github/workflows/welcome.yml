@@ -4,3 +4,14 @@ on:
     types: [opened]
 permissions:
   pull-requests: write
+
+jobs:
+  hello-github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Print Hello message
+        run: |
+          echo "Hello from Github"
